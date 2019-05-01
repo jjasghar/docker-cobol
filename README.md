@@ -6,12 +6,12 @@ This is a basic example of getting a `hello-world`
 application working in a `docker` container.
 
 It's not much, but it show that if you can compile
-your `cobol` down a generic (in this case Debian)
-container can run it.
+your `cobol` down a generic container can run it.
 
 ## Usage
 
 - Clone down the repo
+- Copy one of the Dockerfiles to a `Dockerfile`
 - Run `docker build .`
 - Run `docker run <imagehash>`
 - You should see "Hello World!"
