@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:7
 
 ENV GMP_VERSION=6.0.0
 ENV GNU_COBOL=1.1
@@ -6,7 +6,7 @@ ENV GNU_COBOL=1.1
 RUN yum install -y libtool ncurses ncurses-devel ncurses-libs make && \
     yum install -y libdb-devel libdbi libdbi-devel libtool-ltdl libtool-ltdl-devel db4 db4-devel wget
 
-RUN mkdir /src
+RUN mkdir -p /src/cobol
 
 RUN cd /src && wget https://ftp.gnu.org/gnu/gmp/gmp-${GMP_VERSION}a.tar.xz && \
     tar xf gmp-${GMP_VERSION}a.tar.xz && \
